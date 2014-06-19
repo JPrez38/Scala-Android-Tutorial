@@ -15,13 +15,15 @@ Step 1: Install java from oracle. Currently Kit-Kat supports java 7, but it is r
 
 Step 2: Install Android. You can use a package manager such as brew or go to [here](http://developer.android.com/sdk/index.html). If you downloaded Android from the website, you will need to set the path in your `~/.bash_profile`. Also, you should set the `ANDROID_HOME` environment variable to the path to your sdk.
 
-Step 3: (Recommended) Install [Intellij](http://www.jetbrains.com/idea/) for development. You can use the command line, but especially with scala Intellij is the best for android development. Other plugins for eclipse and android studio are less developed and Intellij should be used if you want to use an IDE over the command line. 
+Step 3: Type `android` into the command line and it will open a list of packages. Make sure to download and install the tools package as well as the api you wish to use.
+
+Step 4: (Recommended) Install [Intellij](http://www.jetbrains.com/idea/) for development. You can use the command line, but especially with scala Intellij is the best for android development. Other plugins for eclipse and android studio are less developed and Intellij should be used if you want to use an IDE over the command line. 
 
 _Scala specific steps_
 
-Step 4: Install Scala. You can use brew install Scala or another package manager or simply download from http://www.scala-lang.org. If you download it manually, you will again need to set the path in your `~/.bash_profile` file to `/path/to/scala/scala_version/bin`. Verify Scala works by typing `source ~/.bash_profile` and then typing Scala into the terminal. If it pulls up the Scala interpreter, it is successfully installed. 
+Step 5: Install Scala. You can use brew install Scala or another package manager or simply download from http://www.scala-lang.org. If you download it manually, you will again need to set the path in your `~/.bash_profile` file to `/path/to/scala/scala_version/bin`. Verify Scala works by typing `source ~/.bash_profile` and then typing Scala into the terminal. If it pulls up the Scala interpreter, it is successfully installed. 
 
-Step 5: Install SBT. Using Scala with android is best when you use SBT to build your projects instead of traditional Android methods. SBT stands for simple build tool and is used for most Scala projects. You can either brew install SBT or download sbt from the [SBT website](http://www.scala-sbt.org/download.html/). Again, if you install SBT manually, you need to set your path in your profile. Verify it works by sourcing your profile and typing sbt into the command line. 
+Step 6: Install SBT. Using Scala with android is best when you use SBT to build your projects instead of traditional Android methods. SBT stands for simple build tool and is used for most Scala projects. You can either brew install SBT or download sbt from the [SBT website](http://www.scala-sbt.org/download.html/). Again, if you install SBT manually, you need to set your path in your profile. Verify it works by sourcing your profile and typing sbt into the command line. 
 
 **Creating the Project**
 
