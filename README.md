@@ -294,6 +294,7 @@ Step 18: If you are working on a team and you need to know how to set up the pro
 
 
 Additional Resources
+* https://groups.google.com/forum/#!forum/scala-on-android
 * https://github.com/pocorall/scaloid
 * https://github.com/pfn/android-sdk-plugin
 * http://www.drdobbs.com/mobile/developing-android-apps-with-scala-and-s/240161584?pgno=2
