@@ -1,11 +1,14 @@
-Scala-Android-Tutorial-for-Beginners
+Scala Android Tutorial
 ====================================
 
 Step by Step walk through for programmers wanting to use Scala for android development
 
  Scala has started to become my personal favorite language, however it is a very difficult language for beginners and it is very hard to find how to set up your development environment, especially for setting it up for use with android. This guide will go step by step on how to set up Scala for use with android. This is intended to be an easy guide even for complete beginners to Scala and it will cover all steps. I find some steps in tutorials that others may skip because they think it is obvious to sometimes cause the worst setup issues. You should have prior java experience and a decent understand of how android works and some Scala knowledge is recommend, but other than that, anyone should be able to jump in to use Scala for android.
 
-I do focus on OSX in this tutorial, however if you are using linux, you will be able to follow along
+I do focus on OSX in this tutorial, however if you are using linux, you will be able to follow along.
+
+*Note: This tutorial focuses on creating a new project. Instructions for cloning into an existing project are found [here](https://github.com/JPrez38/Scala-Android-Tutorial-for-Beginners/wiki/Cloning-into-existing-project).
+
 
 **Installation**
 
@@ -85,15 +88,25 @@ libraryDependencies += "org.scaloid" %% "scaloid" % "3.4-10"
 
 This file specifies the Scala version you are using, android target, compiling options and it also allows the scaloid framework to be integrated into the SBT build. Essentially this file is used for specifying the build settings for SBT when building the Scala Android project.
 
-Step 7: From the command line and in the root directory, type sbt. All the project dependencies will be fetched and downloaded. Next type gen-idea. This will allow the project files to be generated for intellij.
+Step 7: From the command line and in the root directory, type sbt. All the project dependencies will be fetched and downloaded. 
 
-Step 8: Install the intellij SBT and Scala plugins. Go to Preferences > Plugins and click install JetBrains plugin. Find SBT and Scala and download them.
+Step 8: You now can type several commands in SBT
+* `compile`
+* `android:package-release` (creates the release apk)
+* `android:package-debug` (creates the debug apk which is used for development)
+* `android:package` (builds the sbt project and runs the app)
 
-Step 9: Change the Intellij build process. Click on Run > Edit Configurations. Set the module to myproj and specify the default launch activity. Then at the bottom where it says before launch, remove make and instead click on the plus and choose the SBT option. A window will pop up asking you specify the sbt command. Here type in `android:package`. After you hit enter, it should say in the before launch window `Run SBT Action ‘android:package’`. Apply the changes and hit ok. 
+Run `compile` and `android:package-dubug` 
 
-Step 10: Go to your src folder and find your package that you created. Find the main activity (mine is MyActivity) and delete the java file. Create a new scala file in that same package with the same name as the java File. 
+Step 9: Next type gen-idea (still within sbt). This will allow the project files to be generated for intellij.
 
-Step 11: If you are wanting to use scaloid, your file may look like this. You may also design a traditional xml based file in the res folder and structure the Scala code around that but I personally find [Scaloid](https://github.com/pocorall/scaloid) easy to use and it works well. 
+Step 10: Install the intellij SBT and Scala plugins. Go to Preferences > Plugins and click install JetBrains plugin. Scala and install it. Download the [SBT plugin](http://plugins.jetbrains.com/plugin/5007?pr=idea) from a seperate web browser and from plugins setting page, install the downloaded plugin from disk and find the location of where you downloaded the file, apply the changes, then reload Intellij.
+
+Step 11: Change the Intellij build process. Click on Run > Edit Configurations. If you need to, create a new configuration using the + in the top left corner and specify it as and Android Application. Set the module to myproj and specify the default launch activity. Then at the bottom where it says before launch, remove make and instead click on the plus and choose the SBT option. A window will pop up asking you specify the sbt command. Here type in `android:package`. After you hit enter, it should say in the before launch window `Run SBT Action ‘android:package’`. Apply the changes and hit ok. 
+
+Step 12: Go to your src folder and find your package that you created. Find the main activity (mine is MyActivity) and delete the java file. Create a new scala file in that same package with the same name as the java File. 
+
+Step 13: If you are wanting to use scaloid, your file may look like this. You may also design a traditional xml based file in the res folder and structure the Scala code around that but I personally find [Scaloid](https://github.com/pocorall/scaloid) easy to use and it works well. 
 ```
 package com.example.myapp
 
@@ -115,9 +128,9 @@ class MyActivity extends SActivity {
 }
 ```
 
-Step 12: Run the app. 
+Step 14: Run the app. 
 
-Step 13: Add more activities. Just to show you how Java and Scala can run together, I will add both a java activity and a Scala activity that can easily transition between each other. 
+Step 15: Add more activities. Just to show you how Java and Scala can run together, I will add both a java activity and a Scala activity that can easily transition between each other. 
 
 Add this to the Main Activity
 ```
@@ -231,7 +244,10 @@ Make sure to edit your AndroidManifest.xml file and add the following underneath
  </activity>
 ```
 
-Run the project again and you can see how seamless it is to transition from a Java class to a Scala class and vice versa.
+Step 16: Run the project again and you can see how seamless it is to transition from a Java class to a Scala class and vice versa.
+
+Step 17: If you are working on a team and you need to know how to set up the project for other members, instructions are found [here](https://github.com/JPrez38/Scala-Android-Tutorial-for-Beginners/wiki/Cloning-into-existing-project).
+
 
 Additional Resources
 * https://github.com/pocorall/scaloid
