@@ -7,7 +7,7 @@ Step by Step walk through for programmers wanting to use Scala for android devel
 
 I do focus on OSX in this tutorial, however if you are using linux, you will be able to follow along.
 
-*Note: This tutorial focuses on creating a new project. Instructions for cloning into an existing project are found [here](https://github.com/JPrez38/Scala-Android-Tutorial-for-Beginners/wiki/Cloning-into-existing-project).
+*Note: This tutorial focuses on creating a new project. Instructions for cloning into an existing project are found [here](https://github.com/JPrez38/Scala-Android-Tutorial/wiki/Cloning-into-existing-project).
 
 
 **Installation**
@@ -96,7 +96,7 @@ Step 8: You now can type several commands in SBT
 * `android:package-debug` (creates the debug apk which is used for development)
 * `android:package` (builds the sbt project and runs the app)
 
-Run `compile` and `android:package-dubug` 
+Run `compile`, `android:package-release`, and `android:package-dubug` 
 
 Step 9: Next type gen-idea (still within sbt). This will allow the project files to be generated for intellij.
 
@@ -246,7 +246,51 @@ Make sure to edit your AndroidManifest.xml file and add the following underneath
 
 Step 16: Run the project again and you can see how seamless it is to transition from a Java class to a Scala class and vice versa.
 
-Step 17: If you are working on a team and you need to know how to set up the project for other members, instructions are found [here](https://github.com/JPrez38/Scala-Android-Tutorial-for-Beginners/wiki/Cloning-into-existing-project).
+Step 17: Add your .gitignore file and push your repository. Your .gitignore should look like this:
+```
+local.properties
+
+# Java Class File
+*.class
+
+# Files for Dalvik VM
+*.dex
+
+# Generated Files
+bin/
+gen/
+
+# Gradle Files
+.gradle/
+build/
+
+# Built application files
+*.apk
+*.ap_
+
+# Proguard files
+proguard/
+
+# Log files
+*.log
+
+# Intelij Files
+.idea
+.idea_modules
+
+# Sbt files
+.cache/
+.history/
+.lib/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+```
+
+Step 18: If you are working on a team and you need to know how to set up the project for other members, instructions are found [here](https://github.com/JPrez38/Scala-Android-Tutorial/wiki/Cloning-into-existing-project).
 
 
 Additional Resources
